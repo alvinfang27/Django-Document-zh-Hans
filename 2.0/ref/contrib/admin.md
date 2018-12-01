@@ -1,3 +1,5 @@
+> 原文 https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
+
 # Django管理后台	
 
 Django的一个最强大的功能之一就是自动生成管理后台界面。它读取你的模型（model）中的元数据来生成一个快速的、模型为中心的界面，
