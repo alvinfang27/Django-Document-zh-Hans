@@ -13,7 +13,7 @@ Django的一个最强大的功能之一就是自动生成管理界面。它读�
 
 管理界面在使用`startproject`生成默认项目模板时才可以使用。
 
-例如，这里有几个条件：
+作为参考，这里有几个条件：
 
 1. 将`django.contrib.admin`加入你的`INSTALLED_APPS setting`。
 
