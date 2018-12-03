@@ -46,4 +46,4 @@ Django的一个最强大的功能之一就是自动生成管理界面。它读�
 ---
 
 ## `ModelAdmin` 对象
-
+class ModelAdmin[[source]](https://docs.djangoproject.com/en/2.0/_modules/django/contrib/admin/options/#ModelAdmin)
