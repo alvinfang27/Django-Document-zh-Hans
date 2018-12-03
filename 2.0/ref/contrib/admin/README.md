@@ -20,12 +20,22 @@ Django的一个最强大的功能之一就是自动生成管理界面。它读�
 
 2. 管理界面有4个依赖的应用：`django.contrib.auth`、`django.contrib.contenttypes`、`django.contrib.messages`、`django.contrib.sessions`。如果这些应用不在你的`setting`中的`INSTALLED_APPS`，把他们加进去。
 
-3. 把DjangoTemplates设置为`TEMPLATES`的`backend`，把`django.contrib.auth.context_processors.auth`和`django.contrib.messages.context_processors.messages`设置为其`OPTIONS`。同样，把`django.contrib.auth.middleware.AuthenticationMiddleware`和`django.contrib.messages.middleware.MessageMiddleware`加到`MIDDLEWARE`里。以上这些操作都会在使用`startproject`生成项目时自动生成。所以，如果你是手动填写设置的，就按照上面的做法执行。
+3. 把DjangoTemplates设置为`TEMPLATES`的`backend`，把`django.contrib.auth.context_processors.auth`和`django.contrib.messages.context_processors.messages`设置为其`OPTIONS`。同样，把`django.contrib.auth.middleware.AuthenticationMiddleware`和`django.contrib.messages.middleware.MessageMiddleware`加到`MIDDLEWARE`里。以上这些操作都会在使用`startproject`生成项目时自动生成。所以，如果你是手动填写设置的，就按照上面的做法执行。  
 
-<img src="https://github.com/alvinfang27/Django-Document-zh-Hans/blob/master/2.0/ref/contrib/admin/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9A%84%E9%BB%98%E8%AE%A4Settings%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9.png" style="width:50%;align:center">
+![自动生成的默认Settings文件内容](https://github.com/alvinfang27/Django-Document-zh-Hans/blob/master/2.0/ref/contrib/admin/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9A%84%E9%BB%98%E8%AE%A4Settings%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9.png)
 
 4. 确定应用程序的哪些模型是可以在管理界面里编辑。
 
-5. 对于每一个模型,可以选择创建一个ModelAdmin类，来封装这个模型的定制管理功能和选项。
+5. 对于每一个模型,可以选择创建一个`ModelAdmin`类，来封装这个模型的定制管理功能和选项。
 
-6. 
+6. 实例化一个`AdminSite`，告诉它每个模型和`ModelAdmin`类。
+
+7.将`AdminSite`实例加到路由设置（`URLconf`）里。
+
+执行以上步骤之后,您就能够通过访问URL(默认是 `../admin/`)链接到Django管理界面。如果您需要创建一个用户登录,您可以使用[createsuperuser]()命令。
+
+### 其他话题  
+[Admin actions]()  
+[The Django admin documentation generator]()  
+[JavaScript customizations in the admin]()  
+
