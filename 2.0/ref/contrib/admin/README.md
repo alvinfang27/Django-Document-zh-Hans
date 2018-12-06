@@ -59,7 +59,7 @@ admin.site.register(Author, AuthorAdmin)
 ```
 
 > 你需要一个`ModelAdmin`对象么？
-> 在前面的例子中,ModelAdmin类（还）没有定义任何自定义值。因此,将提供默认管理界面。如果默认的管理界面能满足你的需求,你不需要定义一个ModelAdmin对象。你可以不建立`ModelAdmin`对象，直接注册模型类。以上描述可以简化为:
+> 在前面的例子中，`ModelAdmin`类（还）没有定义任何自定义值。因此,将提供默认管理界面。如果默认的管理界面能满足你的需求，你不需要定义一个ModelAdmin对象。你可以不建立`ModelAdmin`对象，直接注册模型类。以上描述可以简化为:
 > ```
 > from django.contrib import admin
 > from myproject.myapp.models import Author
